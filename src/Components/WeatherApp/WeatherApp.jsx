@@ -72,7 +72,7 @@ function WeatherApp() {
   };
 
   return (
-    <div className="container">
+    <div id="container" className="container">
       <div className="top-bar">
         <input type="text" className="cityInput" placeholder="Search" />
         <div
