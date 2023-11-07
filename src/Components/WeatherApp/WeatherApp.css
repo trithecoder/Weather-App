@@ -1,30 +1,120 @@
 header {
-    display: flex;
-    justify-content: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: rgb(250, 250, 250);
+  color: rgb(250, 250, 250);
 }
 
 .app-wrapper {
-    width: 607px;
-    height: 829px;
-    margin: auto;
-    margin-top: 70px;
-    border-radius: 12px;
-    background-image: linear-gradient(180deg, #130754 0%, #3b2f80 100% );
+  width: 607px;
+  height: 829px;
+  margin: auto;
+  margin-top: 70px;
+  border-radius: 12px;
+  background-image: linear-gradient(180deg, #130754 0%, #3b2f80 100%);
 }
 
 .top-bar {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 30px;
 }
 
 .top-bar input {
+  display: flex;
+  width: 362px;
+  height: 50px;
+  background: #ebfffc;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 40px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78px;
+  height: 50px;
+  background: inherit;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.search-icon:hover {
+  background-color: #270cbd;
+}
+
+.weather-image {
+  margin-top: 29px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-temp {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 120px;
+  font-weight: 400;
+}
+
+.weather-location {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.data-container {
+  margin-top: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.element {
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.data {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.icon {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .app-wrapper {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 12px;
+    background-image: linear-gradient(180deg, #130754 0%, #3b2f80 100%);
+  }
+
+  .top-bar input {
     display: flex;
-    width: 362px;
+    width: 60%;
     height: 50px;
     background: #ebfffc;
     border: none;
@@ -34,83 +124,55 @@ header {
     color: #626262;
     font-size: 20px;
     font-weight: 400;
-}
+  }
 
-.search-icon {
+  .search-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 78px;
+    width: 50px;
     height: 50px;
-    background: inherit;
+    background: white;
     border-radius: 40px;
     cursor: pointer;
     transition: 1s;
-}
+  }
 
-.search-icon:hover {
-   background-color: #270cbd;
-}
-
-.weather-image {
+  .weather-image {
     margin-top: 29px;
     display: flex;
     justify-content: center;
-}
+  }
 
-.weather-temp {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 120px;
-    font-weight: 400;
-}
+  .weather-image img {
+    width: 30%;
+  }
 
-.weather-location {
+  .weather-temp {
     display: flex;
     justify-content: center;
     color: white;
     font-size: 60px;
     font-weight: 400;
-}
+  }
 
-.data-container {
-    margin-top: 50px;
-    color: white;
+  .weather-location {
     display: flex;
     justify-content: center;
-}
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+  }
 
-.element {
+  .wind-speeds, .humidity-percent, .text {
+    font-size: 20px;
+  }
+
+  .element {
     margin: auto;
     display: flex;
     align-items: flex-start;
     gap: 12px;
-}
-
-.data {
-    font-size: 34px;
-    font-weight: 400;
-}
-
-.text {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.icon {
-    margin-top: 10px;
-}
-
-.hidden {
-    opacity: 0;
-    filter: blur(1px);
-    transform: translateY(-10%);
-    transition: all 1.7s;
+    padding: 3vw;
   }
-  
-  .show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-  }
+}
